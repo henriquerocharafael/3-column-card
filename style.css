@@ -102,3 +102,21 @@ footer {
   text-align: center;
   margin-top: 2rem;
 }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .box-1 {
+    border-radius: 7px 7px 0 0;
+  }
+  
+  .box-3 {
+    border-radius: 0 0 7px 7px;
+  }
+
+  footer {
+    visibility: hidden;
+  }
+}
