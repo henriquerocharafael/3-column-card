@@ -11,6 +11,11 @@ body {
   background: hsl(0, 0%, 95%);
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -24,16 +29,9 @@ p {
   line-height: 1.8rem;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  min-height: 70vh;
-  margin-top: 5rem;
-}
-
 .container {
   display: flex;
-  width: 70%;
+  max-width: 50rem;
 }
 
 .box-1 {
@@ -55,6 +53,7 @@ a {
 
 .box-1 a {
   color: hsl(31, 77%, 52%);
+  transition: 0.5s;
 }
 
 .box-1 a:hover {
@@ -70,6 +69,7 @@ a {
 
 .box-2 a {
   color: hsl(184, 100%, 22%);
+  transition: 0.5s;
 }
 
 .box-2 a:hover {
@@ -86,6 +86,7 @@ a {
 
 .box-3 a {
   color: hsl(179, 100%, 13%);
+  transition: 0.5s;
 }
 
 .box-3 a:hover {
@@ -98,25 +99,22 @@ a {
   margin-top: 3.5rem;
 }
 
-footer {
-  text-align: center;
-  margin-top: 2rem;
-}
+@media (max-width: 710px) {
+  body {
+    height: auto;
+  }
 
-@media (max-width: 600px) {
   .container {
     flex-direction: column;
+    max-width: 90%;
+    margin: 5rem auto;
   }
 
   .box-1 {
     border-radius: 7px 7px 0 0;
   }
-  
+
   .box-3 {
     border-radius: 0 0 7px 7px;
-  }
-
-  footer {
-    visibility: hidden;
   }
 }
